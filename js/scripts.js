@@ -1,19 +1,21 @@
 $(document).ready(function() {
+  var groceriesList = [];
+
     $("form").submit(function(event) {
-      var nameInput = $("input#favname").val();
-      var colorInput = $("input#favcolor").val();
-      var cityInput = $("input#favcity").val();
 
-      var favthings = [nameInput, colorInput, cityInput];
+      var groceries = $("input#favname").val();
 
-favthings.pop();
-favthings.reverse();
-favthings.push(cityInput);
+      groceriesList.push(groceries);
 
-$(favthings).show();
-$("#list").text(favthings);
-console.log(favthings)
+      console.log(groceriesList.sort());
 
-event.preventDefault();
+
+
+
+$(groceries).show();
+$("#list").text(groceriesList);
+console.log(groceriesList)
+
+    event.preventDefault();
 });
 });
