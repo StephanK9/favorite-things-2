@@ -9,8 +9,9 @@ $(document).ready(function() {
 favthings.pop();
 favthings.reverse();
 favthings.push(cityInput);
-text = "<ul>";
 
+$(favthings).show();
+$("#list").text(favthings);
 console.log(favthings)
 
 event.preventDefault();
